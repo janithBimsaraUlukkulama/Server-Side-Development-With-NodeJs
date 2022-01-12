@@ -1,0 +1,13 @@
+// add mongodb db path to current folder
+mongod --dbpath=data --bind_ip 127.0.0.1
+
+//create database or use database
+use dbName
+
+//insert
+db.dishes.insert({ name: "Uthappizza", description: "Test" });
+db.dishes.find().pretty();
+
+// get time from id
+var id = new ObjectId();
+id.getTimestamp();
